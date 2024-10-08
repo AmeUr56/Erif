@@ -26,22 +26,13 @@ To run this project, ensure you have Python installed, and install the required 
 ```bash
 pip install -r requirements.txt
 ```
-### Requirements
-```bash
-Flask
-Flask-Caching
-Tensorflow
-```
+
 ## Usage
 - 1. Clone the repository:
 ```bash
 git clone https://github.com/your-username/erif.git
 ```
-- 2. Navigate into the project directory:
-```bash
-cd erif
-```
-- 3. Run the application:
+- 2. Run the application:
 ```bash
 flask run
 ```
