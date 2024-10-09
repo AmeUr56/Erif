@@ -2,3 +2,5 @@ flask
 flask-caching
 gunicorn
 tensorflow
+pillow
+numpy
