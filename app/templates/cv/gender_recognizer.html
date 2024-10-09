@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}CV{% endblock %}
+{% block body %}
+
+<div class="page-wrapper">
+    <div class="global-styles w-embed">
+    </div>
+    <main class="main-wrapper">
+        <section class="section_hero">
+            <div class="u-nav-spacer"></div>
+            <div class="padding-global padding-horizontal-m-0">
+                <div id="w-node-_2c84d97c-00bc-8131-9da7-85de9c213239-9c21320c" class="footer_col is-last">
+                    {% if request.method == 'GET' %}
+                    <h5 id="w-node-_2c84d97c-00bc-8131-9da7-85de9c21323a-9c21320c" class="text-color-grey">Enter your image</h5>
+                    <div class="padding-bottom padding-xxsmall"></div>
+                    <div class="footer_col_inner">
+                        <div class="form-block w-form">
+                            <form id="wf-form-Subscribe-Form" name="wf-form-Subscribe-Form" data-name="Subscribe Form" enctype='multipart/form-data' method="POST" data-wf-page-id="66d714565784f849823be852" data-wf-element-id="2c84d97c-00bc-8131-9da7-85de9c213241">
+                                <div class="form_group is-subscribe">
+                                    <input class="form_input is-subscribe w-input" accept='image/*' name="file" data-name="Subscribe Email" placeholder="Your image" type="file" id="Subscribe-Email" required=""/>
+                                    <input type="submit" data-wait="Please wait..." class="button is-subscribe w-button" value="Predict"/>
+                                </div>
+                            </form>
+
+                        </div>
+                        <div class="padding-bottom"></div>
+                    </div>
+                    {% else %}
+                    <section class="section_hero">
+                        <div class="padding-global padding-horizontal-m-0">
+                            <div class="container-large">
+                                <div class="hero_grid">
+                                    <div id="w-node-c869799b-6932-d519-9c89-71bb5ca2042b-5ca20426" data-w-id="c869799b-6932-d519-9c89-71bb5ca2042b" class="hero_content">
+                                        <div id="w-node-c869799b-6932-d519-9c89-71bb5ca2042c-5ca20426">
+                                            <div class="padding-bottom padding-xsmall"></div>
+                                            <p class="body_one">
+                                                {% if result[1] == 1 %}
+                                                    {{ result[0] }}% its a 'Man'
+                                                {% else %}
+                                                    {{ 100-result[0] }}% its a 'Woman'
+                                                {% endif %}        
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </section>
+                    {% endif %}
+            </div>
+        </section>
+{% endblock %}
