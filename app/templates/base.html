@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html data-wf-domain="zeal-consult-template.webflow.io" data-wf-page="66d714565784f849823be852" data-wf-site="66d714555784f849823be7fa" data-wf-status="1" lang="en">
     <head>
-        {% block head %}
         <meta charset="utf-8"/>
 
         <title>{% block title %}Erif{% endblock %}</title>
@@ -23,9 +22,8 @@
         
         <link rel="icon" href="{{ url_for('static',filename='main/img/favicon.png')}}" type="image/png">
         <script src="{{ url_for('static',filename='main/js/scripts.js')}}" defer></script>
-        <link rel="stylesheet" href="{{ url_for('static',filename='static/main/css/styles.css')}}">
-
-        {% endblock %}
+        <link rel="stylesheet" href="{{ url_for('static',filename='main/css/styles.css')}}">
+        {% block head %}{% endblock %}
     </head>
     <body>
         <div class="nav_fixed">
