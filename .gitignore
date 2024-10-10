@@ -1,2 +1,3 @@
+*.ipyc
 /__pycache__/
 /env/

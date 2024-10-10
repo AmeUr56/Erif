@@ -1,4 +1,5 @@
-CACHE_TYPE = 'SimpleCache'          
-CACHE_DEFAULT_TIMEOUT = 300     
+import os
 
-SQLALCHEMY_DATABASE_URI = 'sqlite:///./all.db'       
+class Config:
+    CACHE_TYPE = 'SimpleCache'          
+    CACHE_DEFAULT_TIMEOUT = 300     
